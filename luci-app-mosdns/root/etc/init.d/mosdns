@@ -92,7 +92,7 @@ init_yaml() {
         sed -i "/ecs_remote/d;" $CONF
     fi
 
-    if [ "$prefer_filter" -eq 'disabled' ]; then
+    if [ "$prefer_filter" = 'disabled' ]; then
         sed -i "/option_prefer_filter/d;" $CONF
     else
         sed -i "s,option_prefer_filter,$prefer_filter,g" $CONF
